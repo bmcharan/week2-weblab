@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var arrayNum = [];
+var arrayEven = []; 
+var arrayOdd = []; 
+var i; 
+var NUM_INPUTS;  
+var sumOdd = 0.0;
+var sumEven = 0.0; 
+
+
+NUM_INPUTS = parseInt(prompt("Enter the number of inputs you need: "));
+for (i = 0; i < NUM_INPUTS; i++) {
+arrayNum.push(parseFloat(prompt("Enter the numbers: " + (i + 1))));
+if ((arrayNum[i] % 2) === 1) {
+    arrayOdd.push(arrayNum[i]);
+    
+  }
+  else {
+    arrayEven.push(arrayNum[i]);
+    sumEven += arrayNum[i];
+    
+  }
+}
+
+//Output results
+document.write("All numbers in the array are: " + arrayNum);
+
+document.write("<br/>All even numbers in the array are: " + arrayEven);
+
+
+document.write("<br/>");
+document.write("<br/>All odd numbers in the array are: " + arrayOdd);
+</script>
+</html>
